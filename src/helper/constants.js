@@ -89,4 +89,7 @@ const mapCodesToImage = {
     'c04n': icon_804_oll
 }
 
-export {mapCodesToImage}
+const BASE_URL = 'https://api.weatherbit.io/v2.0'
+const API_KEY = 'c2d3c64087e54d018cae06444bf6a848'
+
+export {mapCodesToImage, BASE_URL, API_KEY}
