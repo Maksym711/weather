@@ -1,0 +1,42 @@
+.weather {
+    max-width: 300px;
+    width: 100%;
+}
+
+.weather-now {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content:center;
+}
+
+.temperature {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.temperature h1 {
+    font-size: 100px;
+    color: white;
+}
+
+.temperature .sign {
+    font-size: 60px;
+    font-weight: 800;
+    color: white;
+}
+
+.weather-now img {
+    width: 80px;
+    height: 80px;
+    align-self: self-start;
+}
+
+.description h4 {
+    text-align: center;
+    margin: 10px 0;
+    color: white;
+    font-size: 20px;
+    margin-bottom: 40px;
+}

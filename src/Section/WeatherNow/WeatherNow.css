@@ -1,0 +1,38 @@
+.weather-now-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    .weather-now-wrapper {
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .weather-now-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+    .weather-now-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .weather-now-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+}

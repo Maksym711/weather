@@ -1,0 +1,28 @@
+.sixteen-days {
+    display: grid;
+    grid-template-columns: repeat(4, 200px);
+    grid-template-rows: 4fr;
+    grid-column-gap: 25px;
+    grid-row-gap: 25px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .sixteen-days {
+        grid-template-columns: repeat(4, 150px);
+        grid-template-rows: 4fr;
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+    .sixteen-days {
+        grid-template-columns: repeat(2, 200px);
+        grid-template-rows: 8fr;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .sixteen-days {
+        grid-template-columns: repeat(2, 150px);
+        grid-template-rows: 8fr;
+    }
+}

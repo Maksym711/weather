@@ -1,0 +1,103 @@
+.navigation {
+    display: flex;
+    gap: 50px;
+    font-weight: 600;
+}
+
+.navigation a {
+    padding: 10px 20px;
+    border: 1px solid white;
+    font-size: 18px;
+    font-style: 700px;
+    color: white;
+}
+
+.navigation .now-navigation:hover, .forecast-navigation:hover {
+    color: #07437e;
+    background: white;
+}
+
+.navigation li .active {
+    color: #07437e;
+    background: white;
+}
+
+.navigation a:hover {
+    color: #07437e;
+    background: white;
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    .navigation {
+        gap: 20px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    nav {
+        width: 100%;
+    }
+
+    .navigation {
+        width: 100%;
+        gap: 0;
+        justify-content: space-between;
+    }
+
+    .navigation li {
+        width: 50%;
+    }
+
+    .navigation li a {
+        display: block;
+        width: 100%;
+        padding: 10px 0;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+    nav {
+        width: 100%;
+    }
+
+    .navigation {
+        width: 100%;
+        gap: 0;
+        justify-content: space-between;
+    }
+
+    .navigation li {
+        width: 50%;
+    }
+
+    .navigation li a {
+        display: block;
+        width: 100%;
+        padding: 10px 0;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    nav {
+        width: 100%;
+    }
+
+    .navigation {
+        width: 100%;
+        gap: 0;
+        justify-content: space-between;
+    }
+
+    .navigation li {
+        width: 50%;
+    }
+
+    .navigation li a {
+        display: block;
+        width: 100%;
+        padding: 10px 0;
+        text-align: center;
+    }
+}

@@ -1,0 +1,23 @@
+.error-fetch {
+    position: fixed;
+    top: 116px;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(53,130,211);
+    text-align: center;
+    padding-top: 100px;
+}
+
+.error-fetch img {
+    margin: auto;
+    width: 200px;
+    height: 200px;
+    margin-bottom: 20px;
+}
+
+.error-fetch h2 {
+    font-size: 30px;
+    font-weight: 700;
+    color: white;
+}

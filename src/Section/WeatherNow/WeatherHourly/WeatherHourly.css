@@ -1,0 +1,57 @@
+.weather-hourly {
+    max-width: 860px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(6, 135px);
+    grid-template-rows: repeat(4,1fr);
+    column-gap: 10px;
+    row-gap: 10px;
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    .weather-hourly {
+        max-width: 570px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 135px);
+        grid-template-rows: repeat(6,1fr);
+        column-gap: 10px;
+        row-gap: 10px;
+    }
+}
+  
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .weather-hourly {
+        max-width: 570px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 135px);
+        grid-template-rows: repeat(6,1fr);
+        column-gap: 10px;
+        row-gap: 10px;
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+    .weather-hourly {
+        max-width: 425px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 135px);
+        grid-template-rows: repeat(8,1fr);
+        column-gap: 10px;
+        row-gap: 10px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .weather-hourly {
+        max-width: 280px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 135px);
+        grid-template-rows: repeat(12,1fr);
+        column-gap: 10px;
+        row-gap: 10px;
+    }
+}

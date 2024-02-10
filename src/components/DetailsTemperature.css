@@ -1,0 +1,14 @@
+.details {
+    width: 100%;
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 5px;
+    color: rgba(255, 255, 255, 0.7);
+    border-bottom: 1px solid white;
+}
+
+.details .data-details {
+    color: white;
+    font-weight: 700;
+}

@@ -1,0 +1,11 @@
+.logo a {
+    font-weight: 900;
+    font-size: 36px;
+    color: white;
+}
+
+@media screen and (max-width: 576px) {
+    .logo a {
+        font-size: 24px;
+    }
+}
