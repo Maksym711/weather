@@ -53,58 +53,20 @@ useEffect(() => {
     weatherContext.setLatCity(latitude)
     weatherContext.setLonCity(longitude)
     weatherContext.setNameCity(city)
+
     if(latitude && longitude){
-        // fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${latitude}&lon=${longitude}&accept-language=en`)
-        // .then(data => data.json())
-        // .then(data => {
-        //     console.log(data)
-        //     weatherContext.setNameCity(data.address.city)
-        //     weatherContext.setLoading(false)
-        // })
-        // .catch(() => {
-        //     weatherContext.setLoading(false)
-        //     weatherContext.setError(true)
-        // })
-
         weatherContext.setLoading(true)
-
         fetchData(getCurrentWeatherUrl(latitude, longitude))
             .then(({data}) => weatherContext.setWeatherData(data))
             .catch(() => weatherContext.setError(true))
             .finally(() => weatherContext.setLoading(false))
 
-        // getCurrentWeather(latitude, longitude)
-        //     .then(({data}) => weatherContext.setWeatherData(data))
-        //     .catch(() => weatherContext.setError(true))
-        //     .finally(() => weatherContext.setLoading(false))
-
-        // weatherContext.setLoading(true)
-        // fetch(`https://api.weatherbit.io/v2.0/current?lat=${latitude}&lon=${longitude}&key=c2d3c64087e54d018cae06444bf6a848`)
-        // .then(data => data.json())
-        // .then(data => {
-        //     weatherContext.setWeatherData(data.data)
-        //     weatherContext.setLoading(false)
-        // })
-        // .catch(() => {
-        //     weatherContext.setLoading(false)
-        //     weatherContext.setError(true)
-        // })
-
-        // getCurrentWeatherHourly(latitude, longitude, weatherContext.setWeatherHourly, weatherContext.setLoading, weatherContext.setError)
-
         fetchData(getCurrentWeatherHourlyUrl(latitude, longitude))
             .then(({data}) => weatherContext.setWeatherHourly(data))
             .catch(() => weatherContext.setError(true))
             .finally(() => weatherContext.setLoading(false))
-
-        // fetch(`https://api.weatherbit.io/v2.0/forecast/hourly?lat=${latitude}&lon=${longitude}&key=c2d3c64087e54d018cae06444bf6a848`)
-        // .then(data => data.json())
-        // .then(data => weatherContext.setWeatherHourly(data.data))
-        // .catch(() => {
-        //     weatherContext.setLoading(false)
-        //     weatherContext.setError(true)
-        // })
-    } else {
+    } 
+    else {
         const success = (position) => {
 
             const lat = position.coords.latitude
@@ -114,56 +76,20 @@ useEffect(() => {
             weatherContext.setLonCity(lon)
 
             weatherContext.setLoading(true)
-
-            // getCurrentNameCity(lat, lon, weatherContext.setNameCity, weatherContext.setLoading, weatherContext.setError)
-            
-
             fetchData(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lon}&accept-language=en`)
                 .then(data => weatherContext.setNameCity(data.address.city))
                 .catch(() => weatherContext.setError(true))
                 .finally(() => weatherContext.setLoading(false))
 
-            // fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lon}&accept-language=en`)
-            // .then(data => data.json())
-            // .then(data => {
-            //     weatherContext.setNameCity(data.address.city)
-            //     weatherContext.setLoading(false)
-            // })
-            // .catch(() => {
-            //     weatherContext.setLoading(false)
-            //     weatherContext.setError(true)
-            // })
-            
-            // getCurrentWeather(lat, lon, weatherContext.setWeatherData, weatherContext.setLoading, weatherContext.setError)
-
             fetchData(getCurrentWeatherUrl(lat, lon))
-            .then(({data}) => weatherContext.setWeatherData(data))
-            .catch(() => weatherContext.setError(true))
-            .finally(() => weatherContext.setLoading(false))
-
-            // fetch(`https://api.weatherbit.io/v2.0/current?lat=${lat}&lon=${lon}&key=c2d3c64087e54d018cae06444bf6a848`)
-            // .then(data => data.json())
-            // .then(data => weatherContext.setWeatherData(data.data))
-            // .catch(() => {
-            //     weatherContext.setLoading(false)
-            //     weatherContext.setError(true)
-            // })
-
-            // getCurrentWeatherHourly(lat, lon, weatherContext.setWeatherHourly, weatherContext.setLoading, weatherContext.setError)
+                .then(({data}) => weatherContext.setWeatherData(data))
+                .catch(() => weatherContext.setError(true))
+                .finally(() => weatherContext.setLoading(false))
 
             fetchData(getCurrentWeatherHourlyUrl(lat, lon))
-            .then(({data}) => weatherContext.setWeatherHourly(data))
-            .catch(() => weatherContext.setError(true))
-            .finally(() => weatherContext.setLoading(false))
-    
-            // fetch(`https://api.weatherbit.io/v2.0/forecast/hourly?lat=${lat}&lon=${lon}&key=c2d3c64087e54d018cae06444bf6a848`)
-            // .then(data => data.json())
-            // .then(data => weatherContext.setWeatherHourly(data.data))
-            // .catch(() => {
-            //     weatherContext.setLoading(false)
-            //     weatherContext.setError(true)
-            // })
-
+                .then(({data}) => weatherContext.setWeatherHourly(data))
+                .catch(() => weatherContext.setError(true))
+                .finally(() => weatherContext.setLoading(false))
         }
     
         const error = () => {
@@ -182,9 +108,7 @@ useEffect(() => {
 useEffect(() => {
     const debounce = setTimeout(() => {
         if(inputValue.length > 0){
-            // getCurrentOptionsCities(inputValue, setFound, setCityOptions, setCounter)
-
-            fetchData(`http://api.geonames.org/searchJSON?name=${inputValue}&maxRows=100&username=mkskhjwssofwfjjcjw00&&&`)
+            fetchData(`https://api.geonames.org/searchJSON?name=${inputValue}&maxRows=100&username=mkskhjwssofwfjjcjw00&&&`)
                 .then(data => {
                     const filteredCities = data.geonames
                         .filter(filt => {
@@ -217,41 +141,6 @@ useEffect(() => {
                     setCounter(-1)
                 })
                 .catch(() => weatherContext.setError(true))
-
-            // fetch(`http://api.geonames.org/searchJSON?name=${inputValue}&maxRows=100&username=mkskhjwssofwfjjcjw00&&&`)  // lang=ru
-            // .then(data => data.json())
-            // .then(data => {
-            //     const filteredCities = data.geonames
-            //         .filter(filt => {
-            //             return filt.fclName === "city, village,..." 
-            //             && filt.fcodeName !== "section of populated place" 
-            //             && filt.lat && filt.lng 
-            //             && filt.name.toLowerCase().startsWith(inputValue.toLowerCase())
-            //         })
-            //         .sort((a,b)=> b.population - a.population)
-            //     const uniqueFilteredCities = uniqueBy(filteredCities, (o1, o2) => o1.name === o2.name && o1.adminName1 === o2.adminName1 && o1.countryName === o2.countryName)
-            //     uniqueFilteredCities.length === 0 ? setFound(true) : setFound(false)
-            //     if(uniqueFilteredCities.length <= 6){
-            //         setCityOptions(uniqueFilteredCities)
-            //     }
-            //     if(uniqueFilteredCities.length > 6 && uniqueFilteredCities.length < 12){
-            //         setCityOptions(uniqueFilteredCities.slice(0, 6))
-            //     }
-            //     if(uniqueFilteredCities.length > 12 && uniqueFilteredCities.length < 18){
-            //         setCityOptions(uniqueFilteredCities.slice(0, 12))
-            //     }
-            //     if(uniqueFilteredCities.length > 18 && uniqueFilteredCities.length < 24){
-            //         setCityOptions(uniqueFilteredCities.slice(0, 18))
-            //     }
-            //     if(uniqueFilteredCities.length > 24 && uniqueFilteredCities.length < 30){
-            //         setCityOptions(uniqueFilteredCities.slice(0, 24))
-            //     }
-            //     if(uniqueFilteredCities.length > 30){
-            //         setCityOptions(uniqueFilteredCities.slice(0, 30))
-            //     }
-            //     setCounter(-1)
-            // })
-            // .catch(() => alert('error when searching for lists of cities'))
         }
         else{
             setCityOptions([])
@@ -279,39 +168,15 @@ const handleSearchClick = (item) => {
         navigate('/')
     }
     weatherContext.setLoading(true)
-
-    // getCurrentWeather(item.lat, item.lng, weatherContext.setWeatherData, weatherContext.setLoading, weatherContext.setError)
-
     fetchData(getCurrentWeatherUrl(item.lat, item.lng))
         .then(({data}) => weatherContext.setWeatherData(data))
         .catch(() => weatherContext.setError(true))
         .finally(() => weatherContext.setLoading(false))
 
-    // fetch(`https://api.weatherbit.io/v2.0/current?lat=${item.lat}&lon=${item.lng}&key=c2d3c64087e54d018cae06444bf6a848`)
-    // .then(response  => response.json())
-    // .then(response  => {
-    //     weatherContext.setWeatherData(response.data)
-    // })
-    // .catch(() => {
-    //     weatherContext.setLoading(false)
-    //     weatherContext.setError(true)
-    // })
-    // .finally(() => weatherContext.setLoading(false))
-
-    // getCurrentWeatherHourly(item.lat, item.lng, weatherContext.setWeatherHourly, weatherContext.setLoading, weatherContext.setError)
-
     fetchData(getCurrentWeatherHourlyUrl(item.lat, item.lng))
         .then(({data}) => weatherContext.setWeatherHourly(data))
         .catch(() => weatherContext.setError(true))
         .finally(() => weatherContext.setLoading(false))
-
-    // fetch(`https://api.weatherbit.io/v2.0/forecast/hourly?lat=${item.lat}&lon=${item.lng}&key=c2d3c64087e54d018cae06444bf6a848`)
-    //     .then(data => data.json())
-    //     .then(data => weatherContext.setWeatherHourly(data.data))
-    //     .catch(() => {
-    //         weatherContext.setLoading(false)
-    //         weatherContext.setError(true)
-    //     })
 }
 
 const onKey = (e) => {

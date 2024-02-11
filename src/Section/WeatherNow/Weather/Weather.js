@@ -14,8 +14,6 @@ export default function Weather() {
         srcWeather = mapCodesToImage[data.weather.icon]
     }
 
-    
-    
     return (
         <>
         {data && (
