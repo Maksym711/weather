@@ -108,7 +108,7 @@ useEffect(() => {
 useEffect(() => {
     const debounce = setTimeout(() => {
         if(inputValue.length > 0){
-            fetchData(`https://api.geonames.org/searchJSON?name=${inputValue}&maxRows=100&username=mkskhjwssofwfjjcjw00&&&`)
+            fetchData(`https://cors-anywhere.herokuapp.com/http://api.geonames.org/searchJSON?name=${inputValue}&maxRows=100&username=mkskhjwssofwfjjcjw00&&&`)
                 .then(data => {
                     const filteredCities = data.geonames
                         .filter(filt => {
