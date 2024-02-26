@@ -9,6 +9,7 @@ import Loading from '../../components/Loading'
 import ErrorFetch from '../../components/ErrorFetch'
 import { getCurrentWeatherUrl, getCurrentWeatherHourlyUrl} from '../../helper/apiWeather' 
 import fetchData from '../../helper/fetchData'
+import { PROXY } from '../../helper/constants' 
 
 
 export default function InputSearch() {
@@ -108,7 +109,7 @@ useEffect(() => {
 useEffect(() => {
     const debounce = setTimeout(() => {
         if(inputValue.length > 0){
-            fetchData(`https://cors-anywhere.herokuapp.com/http://api.geonames.org/searchJSON?name=${inputValue}&maxRows=100&username=mkskhjwssofwfjjcjw00&&&`)
+            fetchData(`${PROXY}/http://api.geonames.org/searchJSON?name=${inputValue}&maxRows=100&username=mkskhjwssofwfjjcjw00&&&`)
                 .then(data => {
                     const filteredCities = data.geonames
                         .filter(filt => {

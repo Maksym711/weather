@@ -12,11 +12,6 @@
     color: white;
 }
 
-.navigation .now-navigation:hover, .forecast-navigation:hover {
-    color: #07437e;
-    background: white;
-}
-
 .navigation li .active {
     color: #07437e;
     background: white;
@@ -30,6 +25,16 @@
 @media screen and (min-width: 992px) and (max-width: 1199px) {
     .navigation {
         gap: 20px;
+    }
+
+    .navigation a:hover {
+        color: white;
+        background: none;
+    }
+
+    .navigation li .active {
+        color: #07437e;
+        background: white;
     }
 }
 
@@ -54,6 +59,16 @@
         padding: 10px 0;
         text-align: center;
     }
+
+    .navigation a:hover {
+        color: white;
+        background: none;
+    }
+    
+    .navigation li .active {
+        color: #07437e;
+        background: white;
+    }
 }
 
 @media screen and (min-width: 576px) and (max-width: 767px) {
@@ -77,6 +92,16 @@
         padding: 10px 0;
         text-align: center;
     }
+
+    .navigation a:hover {
+        color: white;
+        background: none;
+    }
+    
+    .navigation li .active {
+        color: #07437e;
+        background: white;
+    }
 }
 
 @media screen and (max-width: 576px) {
@@ -99,5 +124,15 @@
         width: 100%;
         padding: 10px 0;
         text-align: center;
+    }
+
+    .navigation a:hover {
+        color: white;
+        background: none;
+    }
+    
+    .navigation li .active {
+        color: #07437e;
+        background: white;
     }
 }

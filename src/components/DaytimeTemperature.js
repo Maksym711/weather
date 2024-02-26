@@ -15,7 +15,7 @@ export default function DaytimeTemperature(props) {
             <p>...</p>
             <p className='max-temp'>{Math.round(props.max) > 0 ? '+' + Math.round(props.max) + '°' : Math.round(props.max) + '°'}</p>
         </div>
-        <p className='description'>{props.description}</p>
+        <p className={props.description.length < 18 ? 'description' : 'description small'}>{props.description}</p>
     </div>
     )
 }

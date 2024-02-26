@@ -90,6 +90,7 @@ const mapCodesToImage = {
 }
 
 const BASE_URL = 'https://api.weatherbit.io/v2.0'
-const API_KEY = 'c2d3c64087e54d018cae06444bf6a848'
+const API_KEY = '0b26d0b58f454984bcaa513efee3d4f2'
+const PROXY = 'https://cors-anywhere.herokuapp.com'
 
-export {mapCodesToImage, BASE_URL, API_KEY}
+export {mapCodesToImage, BASE_URL, API_KEY, PROXY}

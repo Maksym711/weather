@@ -9,7 +9,7 @@ export default function Logo() {
 
 return (
 <div className='logo'>
-    <Link to={`/?lat=${weatherContext.latCity}&lon=${weatherContext.lonCity}&city=${weatherContext.nameCity}`}>WeatherWatch</Link>
+    <Link to={`/?lat=${weatherContext.latCity}&lon=${weatherContext.lonCity}&city=${weatherContext.nameCity}`}>WeatherWish</Link>
 </div>
 )
 }

@@ -16,7 +16,7 @@
     margin: 0;
 }
 
-.navigation-weather-forecast li a:hover {
+.navigation-weather-forecast a:hover {
     color: #07437e;
     background: white;
 }
@@ -26,9 +26,31 @@
     background: white;
 }
 
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    .navigation-weather-forecast a:hover {
+        color: white;
+        background: none;
+    }
+    
+    .navigation-weather-forecast li .active {
+        color: #07437e;
+        background: white;
+    }
+}
+
 @media screen and (min-width: 768px) and (max-width: 991px) {
     .navigation-weather-forecast {
         gap: 30px;
+    }
+
+    .navigation-weather-forecast a:hover {
+        color: white;
+        background: none;
+    }
+    
+    .navigation-weather-forecast li .active {
+        color: #07437e;
+        background: white;
     }
 }
 
@@ -36,10 +58,30 @@
     .navigation-weather-forecast {
         gap: 20px;
     }
+
+    .navigation-weather-forecast a:hover {
+        color: white;
+        background: none;
+    }
+    
+    .navigation-weather-forecast li .active {
+        color: #07437e;
+        background: white;
+    }
 }
 
 @media screen and (max-width: 576px) {
     .navigation-weather-forecast {
         gap: 10px;
+    }
+
+    .navigation-weather-forecast a:hover {
+        color: white;
+        background: none;
+    }
+    
+    .navigation-weather-forecast li .active {
+        color: #07437e;
+        background: white;
     }
 }

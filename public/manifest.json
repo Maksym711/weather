@@ -1,6 +1,6 @@
 {
-  "short_name": "WeatherWatch",
-  "name": "WeatherWatch",
+  "short_name": "WeatherWish",
+  "name": "WeatherWish",
   "icons": [
     {
       "src": "faviconWeather2.ico",
@@ -8,12 +8,12 @@
       "type": "image/x-icon"
     },
     {
-      "src": "weather192.png",
+      "src": "logoWeather192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "weather512.png",
+      "src": "logoWeather512.png",
       "type": "image/png",
       "sizes": "512x512"
     }
