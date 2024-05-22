@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.c0cc7dca.css",
+    "main.js": "/static/js/main.decf4b89.js",
+    "static/media/error404_icon.png": "/static/media/error404_icon.0b7f5a1f2d39ebcc220f.png",
+    "static/media/error_smile.png": "/static/media/error_smile.92a44f9891423c73e807.png",
+    "static/media/humidity_icon.png": "/static/media/humidity_icon.15c0c448f9a8b8352311.png",
+    "index.html": "/index.html",
+    "main.c0cc7dca.css.map": "/static/css/main.c0cc7dca.css.map",
+    "main.decf4b89.js.map": "/static/js/main.decf4b89.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c0cc7dca.css",
+    "static/js/main.decf4b89.js"
+  ]
+}
